@@ -219,6 +219,7 @@ const newsBlock = () => {
             newBottomShrinkTopR.append(newBottomImgTop);
             newBottomImgTop.setAttribute('src', "https://warthunder.com/assets/img/svg/icon-out.svg#icon-out");
             newBottomImgTop.setAttribute('class', "BottomRightImgTop");
+            // newBlock.setAttribute('onmouseover', "zoom()")
 
 
 
@@ -503,4 +504,10 @@ let loggedIn = () => {
     else {
         signin.classList.toggle(signin.innerHTML = "SIGN IN");
     }
+}
+
+const slide = () => {
+    let fly = document.querySelector('.contentWrapper');
+    fly.classList.toggle('contentWrapperHide');
+    hideMe();
 }

@@ -309,6 +309,25 @@ body {
     justify-content: center;
 }
 
+.contentWrapperHide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -800px;
+    animation: slider 0.5s ease-in-out;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateY(20vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
 .mainContent {
     width: 1180px;
 }
@@ -412,9 +431,24 @@ body {
     height: 170px;
     width: 370px;
     border: 1px solid #919191;
-    transition: background-size 1s ease;
     background-size: 102%;
     background-position: center center;
+    transition: background-size 1s ease;
+}
+
+.zooming {
+    animation: zoomer 1s ease-in-out infinite;
+    transition: background-size 1s ease;
+}
+
+@keyframes zoomer {
+    0% {
+        transform: scale3d(1, 1, .3);
+    }
+
+    100% {
+        transform: scale3d(1.01, 1.01, 1.01);
+    }
 }
 
 .newBottomShrinkWrapperTop {
