@@ -203,6 +203,7 @@ const newsBlock = () => {
             mainGridContent.append(newWrapper);
 
             newBlock.setAttribute('class', 'newsBlockShrinkTop');
+            // newBlock.setAttribute('onmouseover', 'zoomer()');
             newBlock.style.backgroundImage = "linear-gradient(to bottom, transparent 0%, #13191b 98%), url(" + obj.image + ")";
             newWrapper.append(newBlock);
             newBlock.append(newBottomShrinkWrapperTop);
@@ -219,7 +220,6 @@ const newsBlock = () => {
             newBottomShrinkTopR.append(newBottomImgTop);
             newBottomImgTop.setAttribute('src', "https://warthunder.com/assets/img/svg/icon-out.svg#icon-out");
             newBottomImgTop.setAttribute('class', "BottomRightImgTop");
-            // newBlock.setAttribute('onmouseover', "zoom()")
 
 
 
@@ -510,4 +510,9 @@ const slide = () => {
     let fly = document.querySelector('.contentWrapper');
     fly.classList.toggle('contentWrapperHide');
     hideMe();
+}
+
+const zoom = () => {
+    let zoom = document.querySelector('.newsBlockShrink');
+    zoom.classList.toggle('zooming');
 }
