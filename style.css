@@ -174,7 +174,6 @@ body {
 }
 
 .mainContentTop {
-    height: 850px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -229,6 +228,10 @@ body {
     margin-bottom: 1px;
 }
 
+.hideButton:hover, .rectangle:hover, .chevDown:hover, .topRectangle:hover {
+    border: 1px solid #919191;
+}
+
 .warThunderBox {
     width: 55%;
     height: 400px;
@@ -237,6 +240,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.warThunderBoxHide {
+    display: none;
+    width: 55%;
+    height: 0px;
+    margin-top:0px;
+    transition: all .3s ease;
 }
 
 .warThunderBoxLogoImg {
@@ -269,9 +280,22 @@ body {
 .downloadGame {
     width: 375px;
     height: 50px;
-    border: 1px solid #cfd8dc;
+    border: 1px solid #90a4ae;
     border-radius: 3px;
-    color: #cfd8dc;
+    color: #90a4ae;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.downloadGame:hover {
+    width: 375px;
+    height: 50px;
+    border: 1px solid #5ca3c6;
+    border-radius: 3px;
+    color: #5ca3c6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,52 +313,6 @@ body {
     width: 1180px;
 }
 
-.carouselRow {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.carouselRowColumnOne {
-width: 75%;
-height: 300px;
-}
-
-.carousel {
-    width: 870px;
-    height: 300px;
-    border: solid red;
-}
-
-.carouselRowColumnTwo {
-    width: 25%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
-}
-
-.carouselTopRight {
-    width: 280px;
-    height: 210px;
-    border: solid rgb(10, 204, 222);
-}
-
-.carouselBottomRight {
-    width: 280px;
-    height: 60px;
-    border: solid blue;
-}
-
-.sectionTitle {
-    width: 100%;
-    height: 45px;
-    border: solid black;
-    margin-bottom: 20px;
-}
-
 .mainGridContent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -346,13 +324,235 @@ height: 300px;
 .newsBlock {
     height: 380px;
     width: 370px;
-    border: solid black;
+    border: 1px solid #263035;
+    display: flex;
+    flex-direction: column;
+    transition: background-size 1s ease;
+    background-size: 100%;
+    background-position: top;
 }
 
-.newsBlockShrink {
+.newsBlock:hover {
+    height: 380px;
+    width: 370px;
+    border: 1px solid #919191;
+    display: flex;
+    flex-direction: column;
+    transition: background-size 1s ease;
+    background-size: 102%;
+    background-position: top;
+}
+
+.sectionTitle {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+
+}
+
+.newsText {
+    font-size: 26px;
+    color: #cfd8dc;
+}
+
+.readMoreText {
+    font-size: 16px;
+    color: #4f7183;
+    margin-left: 15px;
+}
+
+.newBottom {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: linear-gradient(to bottom, transparent 0%, #263035 58%);
+}
+
+.newBottomHeader {
+    font-size: 22px;
+    color: #cfd8dc;
+    padding: 15px;
+}
+
+.newBottomText {
+    font-size: 16px;
+    height: 65px;
+    color: #8da0aa;
+    box-shadow: inset 0-35px 1px -25px #263035;
+    padding: 15px;
+}
+
+.newBottomMessages {
+    height: 30px;
+    width: 100%;
+    box-shadow: 0 -15px 15px -5px #263035;
+    background-color: #263035;
+}
+
+.newBottomShrinkWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.newsBlockShrink, .newsBlockShrinkTop {
     height: 170px;
     width: 370px;
-    border: solid black;
+    border: 1px solid #263035;
+    transition: background-size 1s ease;
+    background-size: 100%;
+    background-position: center center;
+    background-position: top;
+}
+
+.newsBlockShrink:Hover, .newsBlockShrinkTop:hover {
+    height: 170px;
+    width: 370px;
+    border: 1px solid #919191;
+    transition: background-size 1s ease;
+    background-size: 102%;
+    background-position: center center;
+}
+
+.newBottomShrinkWrapperTop {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newBottomShrinkTop {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselTopRight {
+    border: 1px solid #fb8c00;
+    background-image: url('https://warthunder.com/assets/img/jpg/widget-shop_big.jpg');
+    display: flex ;
+    justify-content: center;
+    align-items: end;
+    transition: background-size 1s ease;
+    background-size: 100%;
+    background-position: center center;
+}
+
+.carouselTopRight:hover {
+    border: 1px solid #fb8c00;
+    background-image: url('https://warthunder.com/assets/img/jpg/widget-shop_big.jpg');
+    display: flex ;
+    justify-content: center;
+    align-items: end;
+    transition: all .3s ease;
+    overflow: hidden;
+    /* animation: zoomer 1s ease-in-out infinite; */
+    box-shadow: 0 0 10px #fb8c00;
+    transition: background-size 1s ease;
+    background-size: 102%;
+}
+
+.newBottomShrinkTopL {
+    width: 80%;
+    height: 25%;
+    font-size: 22px;
+    color: #cfd8dc;
+    position: relative;
+    bottom: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.newBottomShrinkTopR {
+    width: 10%;
+    height: 25%;
+    font-size: 22px;
+    color: #cfd8dc;
+    position: relative;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter:  invert(100%) brightness(50%) sepia(100%);
+    -webkit-filter: invert(100%) brightness(60%) sepia(50%) hue-rotate(190deg);
+
+}
+
+.newBottomShrinkL {
+    width: 80%;
+    height: 25%;
+    font-size: 22px;
+    color: #cfd8dc;
+    position: relative;
+    bottom: 5px;
+    left: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.newBottomShrinkR {
+    width: 10%;
+    height: 25%;
+    font-size: 22px;
+    color: #cfd8dc;
+    position: relative;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter:  invert(100%) brightness(50%) sepia(100%);
+    -webkit-filter: invert(100%) brightness(60%) sepia(50%) hue-rotate(190deg);
+
+}
+
+.BottomRightImgTop {
+    height: 15px;
+    width: 20px;
+}
+
+.BottomRightImg {
+    height: 15px;
+    width: 20px;
+}
+
+.newBottomShrinkBlank {
+    width: 100%;
+    height: 75%;
+}
+
+.newBottomShrinkBlankTop {
+    width: 100%;
+    height: 75%;
+}
+
+.newBottomShrinkBlankTop {
+    width: 100%;
+    height: 75%;
+}
+
+.newBottomShrink {
+    width: 100%;
+    height: 25%;
+    font-size: 22px;
+    color: #cfd8dc;
+    position: relative;
+    bottom: 5px;
+    left: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
 }
 
 .newWrapper {
@@ -372,12 +572,13 @@ height: 300px;
 .readMore {
     width: 370px;
     height: 45px;
-    border: solid black;
-    margin-top: 30px;
+    border: 1px solid #90a4ae;
+    color: #90a4ae;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    margin-top: 20px;
 }
 
 .left {
@@ -487,111 +688,220 @@ height: 300px;
 	transform: rotate(135deg);
 }
 
-  .slide1 {
-    background-image: url("//static.warthunder.com/upload/image//%21%20new/carousel_674x309/france_ship_locked_e818613fb3e218365da5f5a5eb87ca97.jpg");
-    width: 878px;
-    height: 300px;
-  }
+.carouselRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
-  .slide2 {
-    background-image: url("//static.warthunder.com/upload/image//%21%20new/carousel_674x309/spinner_centurion_mk2_99ef53105a96f7b53baf156ab3bfcb3c.jpg");
-    width: 878px;
-    height: 300px;
-  }
+.carouselRowColumnOne {
+width: 75%;
+height: 300px;
+}
 
-  .slide3 {
-    background-image: url("//static.warthunder.com/upload/image//%21%20new/carousel_674x309/catalina_880x330_4e97d25e27c1e73b4666f0e1af979cd8.jpg");
-    width: 878px;
+.carousel {
+    width: 870px;
     height: 300px;
-  }
+    border: 1px solid #263035;
+}
 
-  * {box-sizing:border-box}
+.carousel:hover {
+    width: 870px;
+    height: 300px;
+    border: 1px solid #919191;
+}
+
+.carouselRowColumnTwo {
+    width: 25%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.carouselBottomRight {
+    width: 280px;
+    height: 60px;
+}
+
+.slide1 {
+    background-image: linear-gradient(to left, transparent 10%, #263439 90%), url("//static.warthunder.com/upload/image//%21%20new/carousel_674x309/france_ship_locked_e818613fb3e218365da5f5a5eb87ca97.jpg");
+    width: 100%;
+    height: 298px;
+}
+
+.slide2 {
+    background-image: linear-gradient(to left, transparent 10%, #263439 90%), url("//static.warthunder.com/upload/image//%21%20new/carousel_674x309/spinner_centurion_mk2_99ef53105a96f7b53baf156ab3bfcb3c.jpg");
+    width: 100%;
+    height: 298px;
+}
+
+.slide3 {
+    background-image: linear-gradient(to left, transparent 10%, #263439 90%), url("//static.warthunder.com/upload/image//%21%20new/carousel_674x309/catalina_880x330_4e97d25e27c1e73b4666f0e1af979cd8.jpg");
+    width: 100%;
+    height: 298px;
+    /* animation: shift 1s ease-in-out; */
+}
+
+* {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+max-width: 1000px;
+position: relative;
+margin: auto;
 }
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+display: none;
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+color: #cfd8dc;
+font-size: 35px;
+font-weight: bold;
+position: relative;
+bottom: 80px;
+left: 50px;
+width: 100%;
+text-align: left;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.slideNav {
+    display: flex;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 4px;
-  width: 450px;
-  margin: 0 2px;
-  background-color: #bbb;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 4px;
+    width: 45px;
+    margin: 0 2px;
+    background-color: black;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    top: 40px;
+    left: 40px;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.dot:hover {
+    cursor: pointer;
+    height: 4px;
+    width: 45px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
-  
+.carouselTopRight {
+    width: 280px;
+    height: 210px;
+}
 
-  
+.carouselTopRight {
+    border: 1px solid #fb8c00;
+    background-image: url('https://warthunder.com/assets/img/jpg/widget-shop_big.jpg');
+    display: flex ;
+    justify-content: center;
+    align-items: end;
+    transition: background-size 1s ease;
+    background-size: 100%;
+    background-position: center center;
+}
+
+.carouselTopRight:hover {
+    border: 1px solid #fb8c00;
+    background-image: url('https://warthunder.com/assets/img/jpg/widget-shop_big.jpg');
+    display: flex ;
+    justify-content: center;
+    align-items: end;
+    transition: all .3s ease;
+    overflow: hidden;
+    /* animation: zoomer 1s ease-in-out infinite; */
+    box-shadow: 0 0 10px #fb8c00;
+    transition: background-size 1s ease;
+    background-size: 102%;
+}
+
+.carouselTopRightText {
+    width: 100%;
+    color: #fb8c00;
+    display: flex ;
+    justify-content: space-between;
+}
+.shopLeft {
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+}
+
+.carouselTopRightIcon {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+}
+
+.storeIcon {
+    height: 20px;
+    width: 45px;
+    filter:  invert(100%) brightness(50%) sepia(100%);
+    -webkit-filter: invert(100%) brightness(40%) sepia(100%) hue-rotate(0deg) saturate(500%);
+}
+
+.carouselBottomRight {
+    color: #90a4ae;
+    border: 1px solid #90a4ae;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselBottomRight:hover {
+    color: #cfd8dc;
+    border: 1px solid #cfd8dc;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.wrapper {
+    overflow: hidden;
+  }
+  div.wrapper > div {
+    width: 100%;
+    height: 100%;
+    transition: background-size 4s ease;
+    background-size: 100%;
+    background-position: center center;
+  }
+  div.wrapper:hover > div {
+    background-size: 120%;
+  }
+  .inner {
+    background-image: url('https://warthunder.com/assets/img/jpg/widget-shop_big.jpg');
+    width: 200px;
+    height: 200px;
+  }
