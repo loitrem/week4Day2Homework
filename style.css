@@ -19,6 +19,7 @@ body {
     width: 100%;
     height: 1080px;
     background-image: linear-gradient(to bottom, transparent 0%, #13191b 80%), url("https://static.warthunder.com/assets/6417ea1848ed628c46d5.png");
+    
   }
 
 .topWrap {
@@ -27,7 +28,7 @@ body {
 }
 
 .topNavbar {
-    height: 22%;
+    height: 23%;
     width: 100%;
     background-color: #252525;
     display: flex;
@@ -35,10 +36,247 @@ body {
 }
 
 .bottomNavbar {
-    height: 80%;
+    height: 140px;
     width: 100%;
-    background-color: black;
-    opacity: 0.6;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomNavbarRow {
+    display: flex;
+    align-items: center;
+    width: 62%;
+    height: 100%;
+}
+
+.ulWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.menuUl {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    height: 100%;
+    font-size: 17px;
+}
+
+.menuLi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cfd8dc;
+    transition: color .3s ease;
+    height: 100%;
+
+}
+
+.menuLi:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(229,57,53);
+    transition: color .3s ease;
+    border-bottom: 2px solid rgb(229,57,53);
+    height: 100%;
+}
+
+.bottomLinkArrowWrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 4px;
+}
+
+.bottomLinkArrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 8px 0 7px;
+    border-color: #cfd8dc transparent transparent transparent;
+}
+
+.warThunderLogoPic {
+    width: 250px;
+    opacity: 0.8;
+}
+
+.warThunderLogoImg {
+    width: 205px;
+    height: 105px;
+}
+
+.osRow {
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.osCell {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.osImg {
+    filter:  invert(100%) brightness(50%) sepia(100%);
+    -webkit-filter: invert(100%) brightness(70%) sepia(100%) hue-rotate(190deg) saturate(500%) opacity(30%);
+
+}
+
+.consoleRow {
+    display: flex;
+    width: 800px;
+    justify-content: center;
+}
+
+.console {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 30px;
+}
+
+.consoleImg {
+    filter:  invert(100%) brightness(50%) sepia(100%);
+    -webkit-filter: invert(100%) brightness(70%) sepia(100%) hue-rotate(190deg) saturate(500%) opacity(30%);
+
+}
+
+.bottomLinkRegister {
+    width: 250px;
+    display: flex;
+    justify-content: right;
+    
+}
+
+.bottomLinkTextRegister {
+    width: 155px;
+    height: 38px;
+    border: 1px solid #e53935;
+    background-color: rgba(229,57,53,.7);
+    border-radius: 3px;
+    color: #cfd8dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.mainContentTop {
+    height: 850px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hideBoxRow {
+    width: 62%;
+    height: 90px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.hideButton {
+    height: 43px;
+    width: 43px;
+    background-color: #263238;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #455a64;
+}
+
+.topRectangle {
+    width: 25px;
+    height: 12px;
+    border: 2px solid #455a64;
+    border-radius: 2px;
+    margin-top: 1px;
+}
+
+.chevDown {
+	border-style: solid;
+	border-width: 2px 2px 0 0;
+	content: '';
+	display: inline-block;
+	height: 5px;
+    width: 5px;
+	position: relative;
+	top: -2px;
+	transform: rotate(135deg);
+    color: #455a64;
+}
+
+.rectangle {
+    width: 25px;
+    height: 2px;
+    border: 2px solid #455a64;
+    border-radius: 2px;
+    margin-bottom: 1px;
+}
+
+.warThunderBox {
+    width: 55%;
+    height: 400px;
+    margin-top: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.warThunderBoxLogoImg {
+    width: 505px;
+    height: 290px;
+}
+
+.lowerButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 85px;
+}
+
+.registerNow {
+    width: 375px;
+    height: 70px;
+    border: 1px solid #e53935;
+    background-color: rgba(229,57,53,.7);
+    border-radius: 3px;
+    color: #cfd8dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.downloadGame {
+    width: 375px;
+    height: 50px;
+    border: 1px solid #cfd8dc;
+    border-radius: 3px;
+    color: #cfd8dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
 .contentWrapper {
@@ -48,15 +286,7 @@ body {
 }
 
 .mainContent {
-    margin-top: 30px;
     width: 1180px;
-    
-}
-
-.mainContentTop {
-    height: 850px;
-    width: 100%;
-    
 }
 
 .carouselRow {
@@ -179,7 +409,7 @@ height: 300px;
     height: 100%;
 }
 
-.link:hover, .linkDropdown:hover, .linkYellow:hover, .gaijinDiv:hover{
+.link:hover, .linkDropdown:hover, .gaijinDiv:hover{
     color: #d4d4d4;
     height: 100%;
     font-size: 13px;
@@ -218,6 +448,18 @@ height: 300px;
     color: #cb9844;
 }
 
+.linkYellow:hover {
+    color: #cb9844;
+    height: 100%;
+    font-size: 13px;
+    background-color: #343434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .linkDropdown {
     display: flex;
     justify-content: center;
@@ -244,3 +486,112 @@ height: 300px;
 	top: -2px;
 	transform: rotate(135deg);
 }
+
+  .slide1 {
+    background-image: url("//static.warthunder.com/upload/image//%21%20new/carousel_674x309/france_ship_locked_e818613fb3e218365da5f5a5eb87ca97.jpg");
+    width: 878px;
+    height: 300px;
+  }
+
+  .slide2 {
+    background-image: url("//static.warthunder.com/upload/image//%21%20new/carousel_674x309/spinner_centurion_mk2_99ef53105a96f7b53baf156ab3bfcb3c.jpg");
+    width: 878px;
+    height: 300px;
+  }
+
+  .slide3 {
+    background-image: url("//static.warthunder.com/upload/image//%21%20new/carousel_674x309/catalina_880x330_4e97d25e27c1e73b4666f0e1af979cd8.jpg");
+    width: 878px;
+    height: 300px;
+  }
+
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 4px;
+  width: 450px;
+  margin: 0 2px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+  
+
+  
